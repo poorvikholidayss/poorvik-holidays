@@ -1,1 +1,412 @@
-<!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Poorvik Holidays Premium</title></head><body><h1>Poorvik Holidays Premium V3</h1><p>Replace with premium site template generated for logo.png and hero.png.</p></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Poorvik Holidays | Travel With Faith, Return With Blessings</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f7f8fa;
+color:#222;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:rgba(0,0,0,.65);
+backdrop-filter:blur(10px);
+z-index:999;
+padding:12px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo img{
+width:50px;
+height:50px;
+border-radius:50%;
+}
+
+.logo h2{
+color:#fff;
+font-size:18px;
+}
+
+.nav-links{
+display:flex;
+gap:20px;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+font-weight:500;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url('hero.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content{
+max-width:850px;
+color:white;
+animation:fadeup 1s ease;
+}
+
+.hero-content h1{
+font-size:55px;
+font-weight:800;
+margin-bottom:15px;
+}
+
+.hero-content p{
+font-size:20px;
+margin-bottom:25px;
+}
+
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:15px 30px;
+border:none;
+border-radius:50px;
+font-weight:700;
+text-decoration:none;
+transition:.3s;
+}
+
+.book-btn{
+background:#d4af37;
+color:#000;
+}
+
+.book-btn:hover{
+transform:translateY(-4px);
+}
+
+.wa-btn{
+background:#25D366;
+color:white;
+}
+
+.wa-btn:hover{
+transform:translateY(-4px);
+}
+
+.scroll{
+margin-top:40px;
+font-size:15px;
+animation:bounce 2s infinite;
+}
+
+/* SECTION */
+
+.section{
+padding:80px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.title{
+text-align:center;
+font-size:38px;
+color:#0d2a52;
+margin-bottom:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+/* MANTRALAYAM */
+
+.featured{
+background:linear-gradient(135deg,#0d2a52,#163d72);
+color:white;
+border-radius:25px;
+padding:35px;
+text-align:center;
+}
+
+.price{
+font-size:40px;
+color:#d4af37;
+font-weight:800;
+}
+
+/* CONTACT */
+
+.contact{
+background:#0d2a52;
+color:white;
+text-align:center;
+padding:70px 20px;
+}
+
+.contact h2{
+margin-bottom:20px;
+}
+
+.contact a{
+display:inline-block;
+margin:10px;
+padding:15px 25px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.call{
+background:#d4af37;
+color:black;
+}
+
+.whatsapp{
+background:#25D366;
+color:white;
+}
+
+/* FLOATING BUTTONS */
+
+.float-wa{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:25px;
+text-decoration:none;
+z-index:999;
+}
+
+.float-call{
+position:fixed;
+right:20px;
+bottom:85px;
+background:#d4af37;
+color:black;
+padding:15px;
+border-radius:50%;
+font-size:25px;
+text-decoration:none;
+z-index:999;
+}
+
+/* ANIMATION */
+
+@keyframes fadeup{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(8px);}
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:38px;
+}
+
+.hero-content p{
+font-size:17px;
+}
+
+.nav-links{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+<img src="logo.png">
+<h2>Poorvik Holidays</h2>
+</div>
+
+<div class="nav-links">
+<a href="#">Home</a>
+<a href="#tours">Tours</a>
+<a href="#mantralayam">Mantralayam</a>
+<a href="#contact">Contact</a>
+</div>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>POORVIK HOLIDAYS</h1>
+
+<p>
+Travel With Faith, Return With Blessings
+</p>
+
+<div class="hero-buttons">
+
+<a href="https://forms.gle/FpQd6fGJkNigDvU36" class="btn book-btn">
+🛕 Book Mantralayam
+</a>
+
+<a href="https://wa.me/918550026723?text=Hi%20Poorvik%20Holidays" class="btn wa-btn">
+💬 WhatsApp Us
+</a>
+
+</div>
+
+<div class="scroll">
+⬇ Scroll Down To Explore Tours
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="tours">
+
+<h2 class="title">Upcoming Tours</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>🌄 Chikkamagaluru</h3>
+<p>Mullayanagiri • Jhari Falls • Coffee Estates</p>
+</div>
+
+<div class="card">
+<h3>🌿 Sakleshpur</h3>
+<p>Manjarabad Fort • Bisle View Point</p>
+</div>
+
+<div class="card">
+<h3>🏖 Coastal Adventure</h3>
+<p>Dandeli • Gokarna • Yana • Honnavar • Murudeshwar</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="mantralayam">
+
+<div class="featured">
+
+<h2>🙏 Mantralayam Devotional Trip</h2>
+
+<br>
+
+<p>Pickup: Bengaluru</p>
+<p>Destination: Sri Guru Raghavendra Swamy Temple</p>
+<p>Return: Next Day Night</p>
+
+<br>
+
+<div class="price">₹1700</div>
+
+<br>
+
+<a href="https://forms.gle/FpQd6fGJkNigDvU36" class="btn book-btn">
+Book Seat Now
+</a>
+
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2>Contact Poorvik Holidays</h2>
+
+<a href="tel:7760767875" class="call">
+📞 Call 7760767875
+</a>
+
+<a href="https://wa.me/918550026723?text=Hi%20Poorvik%20Holidays" class="whatsapp">
+💬 WhatsApp 8550026723
+</a>
+
+<p style="margin-top:25px;">
+Instagram: @poorvikholidays
+</p>
+
+</section>
+
+<a href="tel:7760767875" class="float-call">📞</a>
+
+<a href="https://wa.me/918550026723?text=Hi%20Poorvik%20Holidays" class="float-wa">💬</a>
+
+</body>
+</html>
