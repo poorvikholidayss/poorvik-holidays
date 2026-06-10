@@ -43,14 +43,68 @@ font-size:16px;
 
 <h1 align="center">Poorvik Holidays Booking</h1>
 
-<form action="https://formsubmit.co/YOUR_EMAIL@gmail.com" method="POST">
+<form action="https://formsubmit.co/poorvikholidayss@gmail.com" method="POST">
 
 <input type="text" name="Name" placeholder="Full Name" required>
 
 <input type="tel" name="Phone" placeholder="Phone Number" required>
 
-<input type="number" name="Seats" placeholder="Number of Seats" required>
+<label>Tour Type</label>
+<select id="tourType" name="Tour Type" onchange="toggleState()" required>
+<option value="">Select Tour Type</option>
+<option value="Inside Karnataka">Inside Karnataka</option>
+<option value="Outside Karnataka">Outside Karnataka</option>
+</select>
 
+<div id="stateBox" style="display:none;">
+<label>Select State</label>
+<select name="State">
+<option value="">Select State</option>
+<option>Andhra Pradesh</option>
+<option>Maharashtra</option>
+<option>Goa</option>
+<option>Tamil Nadu</option>
+<option>Kerala</option>
+</select>
+</div>
+
+<label>Destination / Places to Visit</label>
+<textarea
+name="Places"
+placeholder="Example: Coorg, Ooty, Goa, Munnar, Tirupati..."
+required>
+</textarea>
+
+<label>Number of Travellers</label>
+<input
+type="number"
+name="Travellers"
+placeholder="How many people are travelling?"
+required>
+
+<label>Travel Date</label>
+<input
+type="date"
+name="Travel Date"
+required>
+
+<label>Additional Requirements</label>
+<textarea
+name="Message"
+placeholder="Hotel, food, pickup location, special requests..."
+></textarea>
+
+<script>
+function toggleState(){
+var tourType=document.getElementById("tourType").value;
+
+if(tourType=="Outside Karnataka"){
+document.getElementById("stateBox").style.display="block";
+}else{
+document.getElementById("stateBox").style.display="none";
+}
+}
+</script>
 <select name="Tour">
 <option>Chikkamagaluru & Sakleshpur</option>
 <option>Mantralayam</option>
