@@ -1,29 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Poorvik Holidays Booking</title>
+<title>Poorvik Holidays - Create Your Own Tour</title>
+
 <style>
+
 body{
-font-family:Arial;
+font-family:Arial,sans-serif;
 background:#08111f;
 color:white;
 padding:20px;
 }
 
+h1{
+text-align:center;
+color:#FFD700;
+}
+
 form{
-max-width:500px;
+max-width:600px;
 margin:auto;
 background:#10203a;
 padding:25px;
 border-radius:15px;
+box-shadow:0 0 20px rgba(0,0,0,.3);
 }
 
-input,select,textarea{
+label{
+display:block;
+margin-top:15px;
+font-weight:bold;
+}
+
+input,
+select,
+textarea{
 width:100%;
 padding:12px;
-margin:10px 0;
+margin-top:8px;
 border:none;
 border-radius:8px;
+font-size:15px;
+}
+
+textarea{
+min-height:100px;
+resize:vertical;
 }
 
 button{
@@ -35,47 +57,90 @@ border:none;
 border-radius:30px;
 font-weight:bold;
 font-size:16px;
+margin-top:20px;
+cursor:pointer;
 }
+
+button:hover{
+opacity:.9;
+}
+
+#stateBox{
+display:none;
+}
+
+.confirm{
+margin-top:20px;
+}
+
+.confirm input{
+width:auto;
+margin-right:10px;
+}
+
 </style>
+
 </head>
 
 <body>
 
-<h1 align="center">Poorvik Holidays Booking</h1>
+<h1>🌍 Create Your Own Tour</h1>
 
 <form action="https://formsubmit.co/poorvikholidayss@gmail.com" method="POST">
 
-<input type="text" name="Name" placeholder="Full Name" required>
+<label>Full Name</label>
+<input
+type="text"
+name="Name"
+placeholder="Enter your full name"
+required>
 
-<input type="tel" name="Phone" placeholder="Phone Number" required>
+<label>Phone Number</label>
+<input
+type="tel"
+name="Phone"
+placeholder="Enter your phone number"
+required>
 
 <label>Tour Type</label>
-<select id="tourType" name="Tour Type" onchange="toggleState()" required>
+<select
+id="tourType"
+name="Tour Type"
+onchange="toggleState()"
+required>
+
 <option value="">Select Tour Type</option>
 <option value="Inside Karnataka">Inside Karnataka</option>
 <option value="Outside Karnataka">Outside Karnataka</option>
+
 </select>
 
-<div id="stateBox" style="display:none;">
+<div id="stateBox">
+
 <label>Select State</label>
+
 <select name="State">
+
 <option value="">Select State</option>
 <option>Andhra Pradesh</option>
 <option>Maharashtra</option>
 <option>Goa</option>
 <option>Tamil Nadu</option>
 <option>Kerala</option>
+
 </select>
+
 </div>
 
 <label>Destination / Places to Visit</label>
+
 <textarea
 name="Places"
 placeholder="Example: Coorg, Ooty, Goa, Munnar, Tirupati..."
-required>
-</textarea>
+required></textarea>
 
 <label>Number of Travellers</label>
+
 <input
 type="number"
 name="Travellers"
@@ -83,34 +148,61 @@ placeholder="How many people are travelling?"
 required>
 
 <label>Travel Date</label>
+
 <input
 type="date"
 name="Travel Date"
 required>
 
 <label>Additional Requirements</label>
+
 <textarea
-name="Message"
-placeholder="Hotel, food, pickup location, special requests..."
-></textarea>
+name="Requirements"
+placeholder="Hotel, food, pickup location, special requests..."></textarea>
+
+<div class="confirm">
+
+<label>
+
+<input
+type="checkbox"
+required>
+
+I confirm that the above information is correct.
+
+</label>
+
+</div>
+
+<button type="submit">
+🚐 Submit Tour Request
+</button>
+
+</form>
 
 <script>
+
 function toggleState(){
-var tourType=document.getElementById("tourType").value;
 
-if(tourType=="Outside Karnataka"){
-document.getElementById("stateBox").style.display="block";
+var tourType =
+document.getElementById("tourType").value;
+
+if(tourType === "Outside Karnataka"){
+
+document.getElementById("stateBox").style.display = "block";
+
 }else{
-document.getElementById("stateBox").style.display="none";
-}
-}
-</script>
-<select name="Tour">
-<option>Chikkamagaluru & Sakleshpur</option>
-<option>Mantralayam</option>
-<option>Custom Tour</option>
-</select>
 
+document.getElementById("stateBox").style.display = "none";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
 <textarea name="Message" placeholder="Additional Details"></textarea>
 
 <button type="submit">
